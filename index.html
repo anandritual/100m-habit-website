@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The $100M Habit | The Incremental Breakthrough</title>
-    <meta name="description" content="Stop following the sheep. Change is incremental. Use the 3-minute neuroscience ritual to dismantle limiting beliefs.">
+    <title>The $100M Habit | The Surprisingly Simple Way to Breakthrough</title>
+    <meta name="description" content="Stop fighting willpower. Use the 3-minute neuroscience ritual to dismantle limiting beliefs and manifest success.">
     
     <link rel="icon" type="image/x-icon" href="app/favicon.ico">
 
@@ -12,258 +12,190 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        /* NEW: Rich Purple Background Base */
+        /* Deep Purple/Black Background */
         body { 
             font-family: 'Manrope', sans-serif; 
-            background: radial-gradient(ellipse at top, #1a0b2e 0%, #0a0118 100%);
+            background: #05010d;
             color: white; 
         }
-        /* Stronger Orange/Gold Gradient for text */
-        .gold-text { background: linear-gradient(to right, #fbbf24, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        /* Updated Glass effect with purple tint */
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); }
-        /* Orange Glows */
-        .glow-orange { position: absolute; background: radial-gradient(circle, rgba(249,115,22,0.3) 0%, rgba(0,0,0,0) 70%); mix-blend-screen: lighten; pointer-events: none; }
-        /* Green Glows for 'Growth' */
-        .glow-green { position: absolute; background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, rgba(0,0,0,0) 70%); mix-blend-screen: lighten; pointer-events: none; }
-        .quote-mark { font-size: 8rem; line-height: 0; position: absolute; opacity: 0.1; color: #f97316; font-family: serif; }
+        
+        /* The Brand Gradient Text */
+        .brand-text { background: linear-gradient(to right, #c084fc, #e879f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* The Gold Text (for wealth accents) */
+        .gold-text { background: linear-gradient(to right, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Glass Cards */
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        
+        /* The Primary CTA Button (Purple Gradient) */
+        .btn-primary {
+            background: linear-gradient(90deg, #7c3aed 0%, #d946ef 100%);
+            color: white;
+            font-weight: 800;
+            padding: 1rem 2.5rem;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(124, 58, 237, 0.6); }
+
+        .glow-purple { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0,0,0,0) 70%); pointer-events: none; }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden selection:bg-orange-500 selection:text-white">
+<body class="antialiased overflow-x-hidden selection:bg-purple-500 selection:text-white">
 
-    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/10 bg-[#0a0118]/80 backdrop-blur-xl">
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 bg-[#05010d]/90 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="app/logo.png" alt="Logo" class="w-10 h-10 rounded-lg shadow-[0_0_15px_rgba(249,115,22,0.3)]">
+                <img src="app/logo.png" alt="Logo" class="w-10 h-10 rounded-lg">
                 <span class="font-bold text-lg tracking-wide">$100M Habit</span>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-indigo-200">
-                <a href="#manifesto" class="hover:text-white transition">The Manifesto</a>
-                <a href="https://anandritual.com/coaching" target="_blank" class="hover:text-orange-400 transition">Founder Access</a>
-                <a href="#download" class="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold rounded-full hover:scale-105 transition shadow-lg shadow-orange-500/20">Start the Ritual</a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-400">
+                <a href="#pain" class="hover:text-white transition">The Barrier</a>
+                <a href="#breakthrough" class="hover:text-white transition">The Breakthrough</a>
+                <a href="https://anandritual.com/coaching" target="_blank" class="hover:text-purple-400 transition">Founder Access</a>
+                <a href="#download" class="px-5 py-2.5 border border-white/20 rounded-full hover:bg-white hover:text-black transition">Get the App</a>
             </div>
         </div>
     </nav>
 
     <header class="relative pt-32 pb-24 md:pt-48 md:pb-40 px-4 text-center overflow-hidden">
-        <div class="glow-orange w-[800px] h-[800px] top-[-400px] left-1/2 -translate-x-1/2 opacity-40 blur-[120px]"></div>
-        <div class="glow-green w-[600px] h-[600px] bottom-0 right-[-200px] opacity-20 blur-[100px]"></div>
+        <div class="glow-purple top-0 left-1/2 -translate-x-1/2"></div>
         
         <div class="max-w-5xl mx-auto space-y-8 relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-orange-500/30 text-orange-300 text-xs font-bold tracking-widest uppercase shadow-[0_0_20px_rgba(249,115,22,0.1)]">
-                <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse shadow-[0_0_10px_#f97316]"></span>
-                The New Paradigm
-            </div>
-            
-            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-none drop-shadow-2xl">
+            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-none">
                 INCREMENTAL IS<br>
-                <span class="gold-text">MONUMENTAL.</span>
+                <span class="brand-text">MONUMENTAL.</span>
             </h1>
             
             <p class="text-xl md:text-2xl text-indigo-200 max-w-3xl mx-auto leading-relaxed font-light">
-                Everyone else follows the sheep. They force change with willpower. <br>
-                <span class="text-white font-semibold">We grow like nature intended.</span> Almost unnoticed. Until it's unstoppable.
+                The surprisingly simple way to breakthrough. <br>
+                Stop fighting willpower. <span class="text-white font-semibold">Start rewiring your biology.</span>
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-5 justify-center pt-12" id="download">
-                <a href="https://apps.apple.com/app/id6742055584" class="group relative px-8 py-4 bg-white text-slate-900 font-bold rounded-2xl transition hover:scale-[1.02] shadow-[0_0_30px_rgba(255,255,255,0.1)] flex items-center justify-center gap-3">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.29-.03 2.51.87 3.3.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.39 2.82M13 3.5c.54-.65.9-1.51.8-2.33-.81.03-1.79.54-2.34 1.21-.48.58-.9 1.54-.77 2.29.91.08 1.83-.51 2.31-1.17z"/></svg>
-                    <div class="text-left">
-                        <div class="text-[10px] uppercase tracking-wider opacity-60 leading-none">Download on</div>
-                        <div class="text-xl leading-none font-extrabold">App Store</div>
-                    </div>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center pt-10" id="download">
+                <a href="https://apps.apple.com/app/id6742055584" class="btn-primary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.29-.03 2.51.87 3.3.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.39 2.82M13 3.5c.54-.65.9-1.51.8-2.33-.81.03-1.79.54-2.34 1.21-.48.58-.9 1.54-.77 2.29.91.08 1.83-.51 2.31-1.17z"/></svg>
+                    Download on App Store
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.anandritual.app" class="px-8 py-4 glass text-white font-semibold rounded-2xl transition hover:bg-white/10 hover:scale-[1.02] flex items-center justify-center gap-3 border-orange-500/20">
-                    <svg class="w-8 h-8 text-orange-400" fill="currentColor" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91,3.34,2.39,3.84,2.15L13.69,12L3.84,21.85C3.34,21.6,3,21.09,3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.3,10.84L17.3,12.58L15.39,10.67L17.3,8.75L20.3,10.5C20.73,10.75,20.73,11.33,20.3,10.84M13.69,12L3.84,2.15L16.81,8.88L14.54,11.15L13.69,12Z"/></svg>
-                    <div class="text-left">
-                        <div class="text-[10px] uppercase tracking-wider opacity-60 leading-none">Get it on</div>
-                        <div class="text-xl leading-none font-extrabold">Google Play</div>
-                    </div>
+                <a href="https://play.google.com/store/apps/details?id=com.anandritual.app" class="px-8 py-4 glass text-white font-bold rounded-xl hover:bg-white/10 transition flex items-center justify-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91,3.34,2.39,3.84,2.15L13.69,12L3.84,21.85C3.34,21.6,3,21.09,3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.3,10.84L17.3,12.58L15.39,10.67L17.3,8.75L20.3,10.5C20.73,10.75,20.73,11.33,20.3,10.84M13.69,12L3.84,2.15L16.81,8.88L14.54,11.15L13.69,12Z"/></svg>
+                    Google Play
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="manifesto" class="py-24 px-4 relative overflow-hidden">
-        <div class="glow-green w-[500px] h-[500px] top-1/2 left-[-200px] -translate-y-1/2 opacity-30 blur-[150px]"></div>
-
-        <div class="max-w-4xl mx-auto relative z-10">
-            <span class="quote-mark top-10 left-0">“</span>
+    <section id="pain" class="py-24 px-4 bg-black relative overflow-hidden">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             
-            <div class="glass p-10 md:p-14 rounded-[3rem] border-l-4 border-orange-500 space-y-8 shadow-[0_0_50px_rgba(124,58,237,0.1)]">
-                <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">I KNOW YOUR SECRET FAILURE.</h2>
-                
-                <div class="space-y-6 text-lg text-indigo-200 leading-relaxed font-medium">
-                    <p>
-                        You feel shy. You feel like others are better than you. 
-                        Deep down, you worry you were born a failure and might die a failure.
-                    </p>
-                    <p class="text-2xl text-white font-bold">
-                        I want to tell you: You can change your life.
-                    </p>
-                    <p>
-                        But not the way they told you. The "Gurus" tell you to hustle. To grind. To force it.
-                        That is why you fail. You are fighting your own biology.
-                    </p>
-                    <p class="p-6 bg-orange-500/10 border-l-2 border-orange-500 rounded-r-xl italic text-white">
-                        <strong class="text-orange-400 block mb-2 not-italic uppercase tracking-wider">The Truth:</strong>
-                        I know how to change. No one else knows.
-                        The secret is hidden in plain sight. Look at a baby growing. Look at a tree.
-                        Does the tree "hustle"? No. It grows incrementally. Unnoticed. 
-                        That is natural growth. That is the $100M Habit.
-                    </p>
-                </div>
-
-                <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-                    <div class="w-16 h-16 rounded-full bg-indigo-800/50 border-2 border-orange-500/50 overflow-hidden shadow-lg">
-                        </div>
-                    <div>
-                        <div class="font-bold text-xl text-white">Anand Ritual</div>
-                        <div class="text-xs text-orange-400 uppercase tracking-widest font-bold">Founder & Architect</div>
-                    </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                    <img src="app/pain.jpg" alt="Breaking Chains" class="w-full h-full object-cover opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="py-24 px-4 relative">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             <div class="space-y-8">
-                <h2 class="text-5xl font-extrabold leading-none">3 MINUTES.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-400">ZERO FRICTION.</span></h2>
-                <p class="text-xl text-indigo-200">
-                    We answer the market's need for the most frictionless expression of change.
-                    We are in the right place, at the right time.
-                </p>
+                <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                    STRONG.<br>
+                    TALENTED.<br>
+                    <span class="text-red-500">STUCK.</span>
+                </h2>
                 
-                <div class="space-y-4 pt-4">
-                    <div class="p-6 glass rounded-2xl flex items-center justify-between opacity-60 hover:opacity-80 transition">
-                        <div>
-                            <h4 class="font-bold text-lg">Traditional Therapy</h4>
-                            <p class="text-sm text-indigo-300">1 Hour • High Effort • Expensive</p>
-                        </div>
-                        <span class="text-red-500 text-2xl">✕</span>
-                    </div>
-                    
-                    <div class="p-6 rounded-2xl flex items-center justify-between border-2 border-orange-500/50 bg-gradient-to-r from-orange-900/20 to-purple-900/20 scale-105 shadow-[0_0_30px_rgba(249,115,22,0.2)] relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 animate-pulse"></div>
-                        <div class="relative z-10">
-                            <h4 class="font-bold text-white text-xl">The $100M Ritual</h4>
-                            <p class="text-sm text-orange-200 font-bold">3 Minutes • Incremental • Effortless</p>
-                        </div>
-                        <span class="text-orange-400 text-3xl relative z-10">✓</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="h-full min-h-[500px] glass rounded-[3rem] flex items-center justify-center text-center p-12 border-orange-500/20 relative overflow-hidden">
-                <div class="glow-green w-full h-full opacity-20 blur-[100px]"></div>
-                <div class="space-y-6 relative z-10">
-                    <div class="text-7xl filter drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]">🌱 ➝ 🌳</div>
-                    <h3 class="text-3xl font-bold text-white">Natural Growth</h3>
-                    <p class="text-xl text-indigo-200 font-medium leading-relaxed">
-                        Day 1: Unnoticed.<br>
-                        Day 21: Unstoppable.
+                <div class="space-y-6 text-lg text-gray-400 font-light leading-relaxed">
+                    <p class="text-xl text-white font-medium">
+                        Why do you feel like a failure despite your potential?
+                    </p>
+                    <p>
+                        You have the strategy. You have the intellect. But you are fighting an invisible tether.
+                        Every time you try to surge forward, something pulls you back to the start.
+                    </p>
+                    <p>
+                        It is not a lack of discipline. It is a <strong class="text-purple-400">Subconscious Conflict.</strong>
+                        Your conscious mind wants $100M. Your subconscious programming is set to "Survival."
+                    </p>
+                    <p class="border-l-4 border-red-500 pl-6 italic text-white/80">
+                        "Until you make the unconscious conscious, it will direct your life and you will call it fate."
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-4 text-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0a0118] via-indigo-950/50 to-[#0a0118]"></div>
-        
-        <div class="max-w-6xl mx-auto space-y-16 relative z-10">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">CHOOSE YOUR ACCELERATOR</h2>
-                <p class="text-xl text-indigo-200 max-w-2xl mx-auto">We created an efficiency asset others don't have. Crucially, we offer it at a price others can't achieve.</p>
+    <section id="breakthrough" class="py-24 px-4 border-y border-white/5 relative">
+        <div class="glow-purple right-0 top-1/2 -translate-y-1/2 opacity-30"></div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 order-2 md:order-1">
+                <div class="inline-block px-3 py-1 rounded bg-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-widest">
+                    The Solution
+                </div>
+                <h2 class="text-4xl font-bold">THE SURPRISINGLY SIMPLE WAY TO BREAKTHROUGH.</h2>
+                <p class="text-lg text-indigo-200">
+                    You don't need to force it. You need to dissolve it.
+                    <br><br>
+                    Using advanced <strong>NLP (Neuro-Linguistic Programming)</strong> and <strong>Sleight of Mouth</strong> patterns, we surgically dismantle the belief that is holding you back.
+                </p>
+                
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4 p-4 glass rounded-xl">
+                        <span class="text-2xl">⚡</span>
+                        <div>
+                            <strong class="block text-white">3 Minutes a Day</strong>
+                            <span class="text-sm text-gray-400">Fits into the cracks of your life. No friction.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4 p-4 glass rounded-xl">
+                        <span class="text-2xl">🧠</span>
+                        <div>
+                            <strong class="block text-white">Active Rewiring</strong>
+                            <span class="text-sm text-gray-400">We don't just track habits. We build the mind that builds the habit.</span>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="pt-4">
+                    <a href="#download" class="btn-primary">
+                        Start Your Breakthrough
+                    </a>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                
-                <div class="p-8 glass rounded-3xl border-2 border-orange-500/50 relative overflow-hidden group hover:scale-105 transition duration-500 shadow-[0_0_40px_rgba(249,115,22,0.15)]">
-                    <div class="absolute top-0 right-0 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-4 py-2 rounded-bl-2xl uppercase tracking-wider shadow-lg">Best Value</div>
-                    <h3 class="text-2xl font-extrabold text-white mb-2">The Ritual App</h3>
-                    <p class="text-sm text-orange-200 font-bold uppercase tracking-wider mb-8">For the Self-Starter.</p>
-                    <div class="text-5xl font-extrabold text-white mb-6">$7 <span class="text-lg font-bold text-indigo-300">/ mo</span></div>
-                    <ul class="space-y-4 text-indigo-100 mb-10 font-medium">
-                        <li class="flex items-center gap-2"><span class="text-orange-400">✓</span> 3-Minute Daily Protocol</li>
-                        <li class="flex items-center gap-2"><span class="text-orange-400">✓</span> Remove Limiting Beliefs</li>
-                        <li class="flex items-center gap-2"><span class="text-orange-400">✓</span> Manifest Desires</li>
-                    </ul>
-                    <a href="#download" class="block w-full py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-lg text-center font-bold rounded-xl hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] transition">Download Now</a>
-                </div>
-
-                <div class="p-8 glass rounded-3xl border border-white/10 group hover:border-indigo-400/50 transition duration-500">
-                    <h3 class="text-2xl font-bold text-white mb-2">The Library</h3>
-                    <p class="text-sm text-indigo-300 font-bold uppercase tracking-wider mb-8">Deep Dive Methodology.</p>
-                    <div class="text-5xl font-bold text-white mb-6">$15+</div>
-                    <ul class="space-y-4 text-indigo-200 mb-10 font-medium">
-                        <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> "Incremental is Monumental"</li>
-                        <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> "Dismantling Imposter Syndrome"</li>
-                        <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> Audio & Physical Books</li>
-                    </ul>
-                    <a href="https://anandritual.com/library" target="_blank" class="block w-full py-4 bg-white/5 text-white text-lg text-center font-bold rounded-xl hover:bg-white/10 hover:text-orange-300 transition border border-white/5">View on Amazon ↗</a>
-                </div>
-
-                <div class="p-8 glass rounded-3xl border border-white/10 group hover:border-orange-500/50 transition duration-500">
-                    <h3 class="text-2xl font-bold text-white mb-2">Founder Access</h3>
-                    <p class="text-sm text-indigo-300 font-bold uppercase tracking-wider mb-8">For the Empire Builder.</p>
-                    <div class="text-5xl font-bold text-white mb-6">$100 <span class="text-lg font-bold text-indigo-300">/ session</span></div>
-                    <ul class="space-y-4 text-indigo-200 mb-10 font-medium">
-                        <li class="flex items-center gap-2"><span class="text-orange-400">✓</span> 1:1 Zoom Strategy (45 min)</li>
-                        <li class="flex items-center gap-2"><span class="text-orange-400">✓</span> Custom Blueprinting</li>
-                        <li class="flex items-center gap-2"><span class="text-orange-400">✓</span> Direct Access to Anand</li>
-                    </ul>
-                    <a href="https://anandritual.com/coaching" target="_blank" class="block w-full py-4 border-2 border-orange-500/50 text-orange-400 text-lg text-center font-bold rounded-xl hover:bg-orange-500 hover:text-white hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] transition">Apply for Coaching ↗</a>
-                </div>
-
+            <div class="relative order-1 md:order-2">
+                <img src="app/breakthrough.jpg" alt="Breakthrough" class="relative z-10 w-full rounded-2xl shadow-2xl border border-white/10 mix-blend-lighten">
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-4 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-tr from-[#0a0118] via-purple-900/80 to-orange-900/80"></div>
-        <div class="glow-orange w-[800px] h-[800px] top-[-400px] left-1/2 -translate-x-1/2 opacity-50 blur-[150px] mix-blend-screen"></div>
-        <div class="glow-green w-[400px] h-[400px] bottom-0 right-0 opacity-30 blur-[150px] mix-blend-screen"></div>
+    <section class="py-24 px-4 bg-[#080214]">
+        <div class="max-w-4xl mx-auto glass rounded-3xl p-8 md:p-12 border border-purple-500/20 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 blur-[100px] rounded-full"></div>
 
-        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-10 p-8 md:p-16 glass rounded-[3rem] border-2 border-orange-500/30 shadow-[0_0_60px_rgba(249,115,22,0.2)]">
-            
-            <div>
-                <h2 class="text-5xl md:text-7xl font-extrabold uppercase leading-none mb-4 drop-shadow-2xl">
-                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-200 to-orange-400 animate-pulse">STEAL THE</span>
-                    "NEURO-CHECKLIST"
-                </h2>
-                <p class="text-xl md:text-2xl text-indigo-100 font-bold leading-relaxed max-w-2xl mx-auto">
-                    Used by 8-figure founders to <span class="text-white bg-orange-600 px-2 py-1 rounded inline-block -rotate-1 shadow-lg">amputate imposter syndrome</span> before 9 AM.
-                </p>
-            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">ACCESS THE CEO PROTOCOL</h2>
+            <p class="text-lg text-indigo-200 mb-8 max-w-2xl mx-auto">
+                Get the exact 1-page diagnostic used to identify and dismantle the "Fear of Failure" block before 9:00 AM.
+            </p>
 
-            <div class="inline-block border-2 border-orange-500/50 p-6 rounded-2xl bg-black/40 backdrop-blur-xl shadow-[inset_0_0_20px_rgba(249,115,22,0.2)] transform hover:scale-105 transition duration-300">
-                 <p class="text-orange-300 text-lg font-bold flex items-center justify-center gap-3">
-                    <span class="text-3xl">⚠️</span> 
-                    WARNING: This is just one page. It will change how your brain operates forever.
-                </p>
-            </div>
-            
-            <form onsubmit="event.preventDefault(); alert('Connecting to email service...');" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto pt-6">
-                <input type="email" placeholder="Enter your primary email address..." class="flex-1 px-8 py-5 bg-[#0a0118]/80 border-2 border-indigo-500/30 rounded-2xl focus:border-orange-500 focus:shadow-[0_0_30px_rgba(249,115,22,0.3)] focus:outline-none text-white text-lg placeholder-indigo-400/60 transition">
-                <button class="px-10 py-5 bg-gradient-to-r from-orange-600 to-amber-500 text-white text-lg font-extrabold rounded-2xl hover:from-orange-500 hover:to-amber-400 hover:scale-105 shadow-[0_0_40px_rgba(249,115,22,0.4)] transition relative overflow-hidden group">
-                    <span class="relative z-10 flex items-center gap-2">INSTANT PDF ACCESS ⚡</span>
-                    <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <form onsubmit="event.preventDefault(); alert('Connecting...');" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto relative z-10">
+                <input type="email" placeholder="Enter your business email" class="flex-1 px-6 py-4 bg-black/40 border border-white/10 rounded-xl focus:border-purple-500 focus:outline-none text-white transition">
+                <button class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-purple-50 transition">
+                    Send PDF
                 </button>
             </form>
-             <p class="text-indigo-300 text-sm font-medium">100% Secure. Join 15,000+ High Achievers.</p>
+            
+            <p class="text-xs text-gray-500 mt-6 uppercase tracking-widest">Reserved for High Achievers</p>
         </div>
     </section>
 
-    <footer class="py-16 text-center text-indigo-400/60 text-sm border-t border-white/5 bg-[#0a0118]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-8">
-                <img src="app/logo.png" alt="Logo" class="w-12 h-12 mx-auto rounded-xl opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500">
-            </div>
-            <p class="mb-4">&copy; 2025 Anand Ritual. All rights reserved.</p>
-            <p class="text-xs uppercase tracking-widest font-bold text-indigo-500/40">Innovation • Relationship • Convenience • Price</p>
-        </div>
+    <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
+        <p>&copy; 2025 Anand Ritual. Innovation. Relationship. Convenience. Price.</p>
     </footer>
 
 </body>
